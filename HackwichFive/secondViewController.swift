@@ -8,22 +8,27 @@
 import UIKit
 
 class secondViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var item2topLabel: UILabel!
+    
+    @IBOutlet weak var item2buttomLabel: UILabel!
+    
+    var myFavoriteShows: [String] = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        item2topLabel.text = "My Favorite Shows:"
+        
+        myFavoriteShows = ["One Piece", "SATC", "Star Wars", "Sherlock", "GOT"]
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func item2buttonPressed(_ sender: Any)
+    {
+        item2buttomLabel.text = "\(myFavoriteShows[2])"
     }
-    */
-
+    
 }

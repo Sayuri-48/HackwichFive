@@ -15,10 +15,40 @@
                     <view key="view" contentMode="scaleToFill" id="YJq-87-T1l">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzB-1J-D9C">
+                                <rect key="frame" x="70" y="540" width="252" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40571993260101191" green="0.90688417191357962" blue="0.87354912312796096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="See My Favorite Shows"/>
+                                <connections>
+                                    <action selector="item2buttonPressed:" destination="sl7-Ri-3V9" eventType="touchUpInside" id="RAc-He-QFn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh4-JE-QAY">
+                                <rect key="frame" x="16" y="350" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryR-hM-US4">
+                                <rect key="frame" x="16" y="187" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ho9-4P-w8O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iuS-8D-8T5"/>
+                    <connections>
+                        <outlet property="item2buttomLabel" destination="Lh4-JE-QAY" id="ijb-Dw-h6X"/>
+                        <outlet property="item2topLabel" destination="ryR-hM-US4" id="Xv0-CA-g4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIW-kz-h8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,7 +122,7 @@
         <scene sceneID="BYX-7M-ATC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vmo-Z3-vw0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fave Foods" image="heart.circle.fill" catalog="system" id="CUc-Or-VIc"/>
+                    <tabBarItem key="tabBarItem" title="Fave Foods" image="fork.knife.circle.fill" catalog="system" id="CUc-Or-VIc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iEt-ut-mkn">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -107,11 +137,11 @@
             </objects>
             <point key="canvasLocation" x="-83.206106870229007" y="-623.23943661971839"/>
         </scene>
-        <!--Item 2-->
+        <!--Fave Shows-->
         <scene sceneID="V1q-bv-rIA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1d-tA-zxt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yc0-Kv-ONV"/>
+                    <tabBarItem key="tabBarItem" title="Fave Shows" image="play.rectangle.fill" catalog="system" id="yc0-Kv-ONV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="giI-Sn-BlQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -128,7 +158,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
