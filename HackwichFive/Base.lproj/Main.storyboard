@@ -17,26 +17,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzB-1J-D9C">
-                                <rect key="frame" x="70" y="540" width="252" height="67"/>
+                                <rect key="frame" x="51" y="540" width="300" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40571993260101191" green="0.90688417191357962" blue="0.87354912312796096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="See My Favorite Shows"/>
+                                <buttonConfiguration key="configuration" style="plain" title="See My Favorite Star Wars">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="item2buttonPressed:" destination="sl7-Ri-3V9" eventType="touchUpInside" id="RAc-He-QFn"/>
+                                    <action selector="button2Pressed:" destination="sl7-Ri-3V9" eventType="touchUpInside" id="hAq-cy-5Bu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh4-JE-QAY">
                                 <rect key="frame" x="16" y="350" width="361" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryR-hM-US4">
-                                <rect key="frame" x="16" y="187" width="361" height="79"/>
+                                <rect key="frame" x="16" y="156" width="361" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,6 +48,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iuS-8D-8T5"/>
                     <connections>
+                        <outlet property="buttonLabel2" destination="gzB-1J-D9C" id="mXv-k2-sY1"/>
                         <outlet property="item2buttomLabel" destination="Lh4-JE-QAY" id="ijb-Dw-h6X"/>
                         <outlet property="item2topLabel" destination="ryR-hM-US4" id="Xv0-CA-g4N"/>
                     </connections>
@@ -65,7 +68,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-5f-DCM">
                                 <rect key="frame" x="37" y="331" width="318" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -74,15 +77,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="See My Favorite Foods"/>
+                                <buttonConfiguration key="configuration" style="plain" title="See My Favorite Foods">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="fOd-Xx-FUj" eventType="touchUpInside" id="P4t-ij-8j6"/>
+                                    <action selector="buttonPressed:" destination="fOd-Xx-FUj" eventType="touchUpInside" id="AsI-pq-JHw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMH-IY-Yl3">
-                                <rect key="frame" x="37" y="187" width="318" height="75"/>
+                                <rect key="frame" x="37" y="179" width="318" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -93,6 +98,7 @@
                     <navigationItem key="navigationItem" id="UQd-O2-VV4"/>
                     <connections>
                         <outlet property="bottomLabel" destination="iz9-5f-DCM" id="5RN-5D-uxP"/>
+                        <outlet property="buttonLabel" destination="WdB-5j-d0J" id="1c4-fR-oxt"/>
                         <outlet property="topLabel" destination="aMH-IY-Yl3" id="uJr-KW-9A9"/>
                     </connections>
                 </viewController>
@@ -137,11 +143,11 @@
             </objects>
             <point key="canvasLocation" x="-83.206106870229007" y="-623.23943661971839"/>
         </scene>
-        <!--Fave Shows-->
+        <!--Fave StarWars Series-->
         <scene sceneID="V1q-bv-rIA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I1d-tA-zxt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fave Shows" image="play.rectangle.fill" catalog="system" id="yc0-Kv-ONV"/>
+                    <tabBarItem key="tabBarItem" title="Fave StarWars Series" image="play.rectangle.fill" catalog="system" id="yc0-Kv-ONV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="giI-Sn-BlQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

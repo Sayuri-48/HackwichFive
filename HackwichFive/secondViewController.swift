@@ -9,26 +9,43 @@ import UIKit
 
 class secondViewController: UIViewController {
     
+    var currentIndex = 0
     
     @IBOutlet weak var item2topLabel: UILabel!
     
     @IBOutlet weak var item2buttomLabel: UILabel!
     
+    @IBOutlet weak var buttonLabel2: UIButton!
+    
+    
     var myFavoriteShows: [String] = [""]
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        item2topLabel.text = "My Favorite Shows:"
+        item2topLabel.text = "🪐" + " My Favorite \n StarWars Series:"
         
-        myFavoriteShows = ["One Piece", "SATC", "Star Wars", "Sherlock", "GOT"]
+        myFavoriteShows = ["Clone Wars", "Bad Batch", "Mandalorian", "Episode III", "Andor"]
         
+        buttonLabel2.setTitle("See My Favorite StarWars Series", for: UIControl.State.normal)
         // Do any additional setup after loading the view.
+        
     }
     
-    @IBAction func item2buttonPressed(_ sender: Any)
+    @IBAction func button2Pressed(_ sender: Any)
     {
-        item2buttomLabel.text = "\(myFavoriteShows[2])"
+        if currentIndex < myFavoriteShows.count
+        {
+            item2buttomLabel.text = "\(myFavoriteShows[currentIndex])"
+            buttonLabel2.setTitle("Next", for: UIControl.State.normal)
+            currentIndex += 1
+        }
+        else
+        {
+            print("button has been disabled")
+            (buttonLabel2!).isEnabled=false
+        }
     }
     
 }
