@@ -35,15 +35,24 @@ class secondViewController: UIViewController {
     
     @IBAction func button2Pressed(_ sender: Any)
     {
+        //comment #1 Set the if conditional statement to detect if the currentIndex is within the counts of elements in Array.
         if currentIndex < myFavoriteShows.count
         {
+        //comment #2 Change the text in item2bottomLabel to the element in Array refered from currentIndex.
             item2buttomLabel.text = "\(myFavoriteShows[currentIndex])"
+            
+        //comment #3 Change the text in buttonLabel to "Next".
             buttonLabel2.setTitle("Next", for: UIControl.State.normal)
+            
+        //comment #4 Add 1 and change the currentIndex everytime you press the button, then it shows the next element in Array when you press button next time.
             currentIndex += 1
         }
         else
         {
+        //comment #5 Print the text in console to make sure else is excuted.
             print("button has been disabled")
+            
+        //comment #6 Disable the button.
             (buttonLabel2!).isEnabled=false
         }
     }
